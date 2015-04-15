@@ -1,0 +1,21 @@
+{
+    "name": "ldapsync",
+    "version": "1.0.0",
+    "description": "Tool to sync info between ldap servers with different structures.",
+    "author": "Estêvão Samuel Procópio Amaral <tevaum@gmail.com>",
+    "repository": {
+	"type": "git",
+	"url": "https://github.com/noc-ufvjm/ldapsync.git"
+    },
+    "bugs": {
+	"url": "https://github.com/noc-ufvjm/ldapsync/issues"
+    },
+    "dependencies": {
+	"ldapjs": "*",
+	"express": "4.x.x",
+	"body-parser": "~1.0.1",
+	"jade": "*",
+	"tmp": "*"
+    },
+    "license": "GPLv2"
+}

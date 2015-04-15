@@ -1,0 +1,5 @@
+#operations li span {
+    text-transform: capitalize;
+    display: inline-block;
+    width: 10em;
+}
