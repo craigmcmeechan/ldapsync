@@ -28,7 +28,12 @@ sync.on('entries-to-add', function (entries) {
 	return entry.object;
     });
 
-    proxy.put('add', ents);
+    var max = 100;
+
+    for (var i = 0; i < entries.length; i += max) {
+	proxy.put('add', ents.slice(i, (i+max)));
+    }
+
 });
 
 sync.on('entries-to-update', function (entries) {
@@ -39,6 +44,10 @@ sync.on('entries-to-update', function (entries) {
     });
 
     proxy.put('update', ents);
+});
+
+sync.on('ready', function () {
+    sync.check_entries(700);
 });
 
 proxy.clean(function () {
